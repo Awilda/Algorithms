@@ -12,10 +12,6 @@
 
 var isProperlyBalanced = function(str) {
 	
-	var paren = "()";
-	var brack = "[]";
-	var curly = "{}";
-	
 	for (var i = 0; i < str.length; i++) {
 		str = str.replace(/\(\)/g,"");
 		str = str.replace(/\{\}/g,"");
