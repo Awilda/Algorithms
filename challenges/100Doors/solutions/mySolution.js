@@ -2,7 +2,7 @@ var doors = [];
 
 var initialDoorStatus = function(doorArray) {
 	for (var index = 1; index <= 100; index++) {
-		doors[index] = "closed";
+		doors[index] = (index + ": closed");
 	}	
 	return doors;
 };
@@ -10,10 +10,10 @@ var initialDoorStatus = function(doorArray) {
 var everySecondDoor = function(initialDoorStatus) {
 	for (var index = 1; index <= 100; index++) {
 		if (index % 2 === 0) {
-			if (doors[index] === "closed") {
-				doors[index] = "open";
-			} else if (doors[index] === "open") {
-				doors[index] = "closed";
+			if ((doors[index]).indexOf("closed")) {
+				doors[index] = (index + ": open");
+			} else if ((doors[index]).indexOf("open")) {
+				doors[index] = (index + ": closed");
 			}
 		}
 	}	
@@ -23,11 +23,11 @@ var everySecondDoor = function(initialDoorStatus) {
 var everyThirdDoor = function(everySecondDoor) {
 	for (var index = 1; index <= 100; index++) {
 		if (index % 3 === 0) {
-			if (doors[index] === "closed") {
-				doors[index] = "open";
-		} else if (doors[index] === "open") {
-			doors[index] = "closed";
-		}
+			if ((doors[index]).indexOf("closed")) {
+				doors[index] = (index + ": open");
+			} else if ((doors[index]).indexOf("open")) {
+				doors[index] = (index + ": closed");
+			}
 		}
 	}
 	return doors;
